@@ -1,0 +1,7 @@
+include:
+  - project: 'some/ci-cd'
+    ref: master
+    file: '/entrypoints/.frontend.yml'
+
+variables:
+  AUTODEPLOY: "true"

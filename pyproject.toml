@@ -1,0 +1,32 @@
+[tool.poetry]
+name ="sample_backend"
+version = "0.1.0"
+description = "aiogram + fastapi + redis"
+authors = ["Алил <alil@mail.ru>"]
+readme = "README.md"
+packages = [{include = "sample_backend"}]
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["all"], version = "^0.111.1"}
+loguru = "^0.7.2"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.32"}
+alembic = "^1.13.1"
+asyncpg = "^0.29.0"
+redis = "^5.0.8"
+faststream = {extras = ["nats"], version = "^0.5.18"}
+fastapi-utilities = "^0.2.0"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+psycopg2 = "^2.9.9"
+requests = "^2.32.3"
+gunicorn = "^23.0.0"
+aiogram = "^3.13.1"
+babel = "^2.16.0"
+mako = "^1.3.8"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
