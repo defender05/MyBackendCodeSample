@@ -1,4 +1,4 @@
-# FASTAPI SAMPLE PROJECT
+# FASTAPI BACKEND + TELEGRAM BOT WITH WEB APP - SAMPLE PROJECT
 Стэк:
 - fastapi
 - sqlalchemy
@@ -10,4 +10,3 @@
 - redis
 - babel
 - loguru
-
