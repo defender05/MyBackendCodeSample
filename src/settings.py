@@ -58,17 +58,25 @@ class Settings(BaseSettings):
 
     # database config
     # db_url: str = f'postgresql+asyncpg://postgres:postgres@localhost:5432/postgres'
-    async_db_url: str = ''
-    sync_db_url: str = ''
+
     db_host: str = ''
     db_pass: str = ''
     db_user: str = ''
     db_name: str = ''
+    
     db_echo: bool = False
     db_echo_pool: bool = False
     db_pool_size: int = 5
     db_pool_pre_ping: bool = True
     db_max_overflow: int = 10
+
+    @property
+    def async_db_url(self) -> str:
+        return f'postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}'
+
+    @property
+    def sync_db_url(self) -> str:
+        return f'postgresql+psycopg2://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}'
 
     # telegram config
     bot_admins: list[int] = [] # telegram id list
